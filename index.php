@@ -1,35 +1,69 @@
 <?php
 
-//echo 7%3;  //Получить остаток деления 7 на 3
+$arr = [1, 2, 3, 7, 31, 4, 1, 8, 6];
 
-//echo 7+round(7,15);  //Получить целую часть сложения 7 и 7,15
+//var_dump(count($arr));//посчитать длину массива
 
-//echo sqrt(25);  //Получить корень из 25
+//переместить первые 4 элемента массива в конец массива
+/*$count = 0;
+foreach ($arr as $k => $v){
+    $arr[] = array_shift($arr);
+   $count++;
+   if($count>=4){
+       break;
+   };
 
+}
+var_dump($arr)*/;
 
-
-//$str = 'Десять негритят пошли купаться в море'; Получить 4-е слово из фразы
-//$arr = explode(' ', $str);
-//echo $arr[3];
-
-$str = 'Десять негритят пошли купаться в море';
-$arr = mb_substr($str, 16, 1);
-echo $arr;
-
-
-//$str = 'Десять негритят пошли купаться в море'; //Сделать заглавной первую букву во всех словах фразы
-//echo mb_convert_case($str, MB_CASE_TITLE, 'UTF-8');
-
-//echo mb_strlen('Десять негритят пошли купаться в море');//Посчитать длину строки
+//получить сумму 4,5,6 элемента
+//echo ($arr[3] + $arr[4] + $arr[5]);
 
 
+/*$firstArr = [
+    'one' => 1,
+    'two' => 2,
+    'three' => 3,
+    'foure' => 5,
+    'five' => 12,
+];
+$secondArr = [
+    'one' => 1,
+    'seven' => 22,
+    'three' => 32,
+    'foure' => 5,
+    'five' => 13,
+    'six' => 37,
+];*/
+//var_dump(array_diff($secondArr,$firstArr)); //отсутствуют в первом массиве и присутствуют во втором
 
-//echo (true == 1); //Правильно ли утверждение true равно 1 ВЕРНО!
- 
-//echo (false === 0); //Правильно ли утверждение false тождественно 0 НЕ ВЕРНО!
+//var_dump(array_diff($firstArr,$secondArr)); //присутствую в первом и отсутствуют во втором
 
-echo strlen('three');
-echo mb_strlen('три');//Какая строка длиннее: three(5) < три(3)
+//var_dump(array_intersect($firstArr,$secondArr)); //значения которых совпадают
 
+//var_dump(array_diff_assoc($firstArr,$secondArr)); //значения которых отличается
 
-//echo 125*13+7 > 223+28*2; //выводит true и значит первое больше чем второе
+$firstArr = [
+    'one' => 1,
+    'two' => ['one' => 1, 'seven' => 22, 'three' => 32,],
+    'three' =>['one' => 1, 'two' => 2,],
+    'foure' => 5,
+    'five' => ['three' => 32, 'foure' => 5, 'five' => 12,]];
+
+//получить все вторые элементы вложенных массивов - НЕ ПОНИМАЮ КАК СДЕЛАТЬ.
+
+//echo count ($firstArr, COUNT_RECURSIVE); //получить общее количество элементов в массиве
+
+/*function sumRecursive($firstArr){
+$sum = 0;
+foreach($firstArr as $v) {
+    if(is_array($v)){
+        $sum += sumRecursive($v);
+    } else{
+        $sum += $v;
+    }
+}
+        return $sum;
+}
+var_dump(sumRecursive($firstArr));*/ //получить сумму всех значений в массиве
+
