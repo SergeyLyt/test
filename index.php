@@ -50,7 +50,16 @@ $firstArr = [
     'foure' => 5,
     'five' => ['three' => 32, 'foure' => 5, 'five' => 12,]];
 
-//получить все вторые элементы вложенных массивов - НЕ ПОНИМАЮ КАК СДЕЛАТЬ.
+//получить все вторые элементы вложенных массиво
+
+foreach ($firstArr as $k => $v){
+    if (is_array($v)){
+        var_dump(array_slice($v, 1, 1));
+    }
+
+}
+
+
 
 //echo count ($firstArr, COUNT_RECURSIVE); //получить общее количество элементов в массиве
 
@@ -66,4 +75,6 @@ foreach($firstArr as $v) {
         return $sum;
 }
 var_dump(sumRecursive($firstArr));*/ //получить сумму всех значений в массиве
+
+
 
