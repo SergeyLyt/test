@@ -44,11 +44,11 @@ $secondArr = [
 //var_dump(array_diff_assoc($firstArr,$secondArr)); //значения которых отличается
 
 $firstArr = [
-    'one' => 1,
-    'two' => ['one' => 1, 'seven' => 22, 'three' => 32,],
-    'three' =>['one' => 1, 'two' => 2,],
+    'one'   => 1,
+    'two'   => ['one' => 1, 'seven' => 22, 'three' => 32,],
+    'three' => ['one' => 1, 'two' => 2,],
     'foure' => 5,
-    'five' => ['three' => 32, 'foure' => 5, 'five' => 12,]];
+    'five'  => ['three' => 32, 'foure' => 5, 'five' => 12,]];
 
 //получить все вторые элементы вложенных массиво
 
@@ -58,8 +58,6 @@ foreach ($firstArr as $k => $v){
     }
 
 }
-
-
 
 //echo count ($firstArr, COUNT_RECURSIVE); //получить общее количество элементов в массиве
 
