@@ -84,26 +84,47 @@ echo $objC->exponentiation() . ' ' . 'Возведение в степень' . 
 
 final class E extends B
 {
-    protected $experience;
+     protected $experience;
 
     public function sum1()
     {
         return $this->experience + $this->old;
-    }
 
     public function getExperience()
     {
         return $this->experience;
     }
-
     public function setExperience($experience)
     {
         $this->experience = $experience;
     }
-}
 
+}
 $objE = new E();
 $objE->setExperience(4);
 $objE->setOld(2020);
-echo $objE->sum1() . ' ' . 'сум' . '<br>';
+echo $objB->sum1() . ' ' . 'sum1' . '<br>';
 
+/*class B extends A
+{
+    protected $old;
+
+    public function sum()
+    {
+        return $this->old + $this->year;
+    }
+    public function getOld()
+    {
+        return $this->old;
+    }
+    public function setOld($old)
+    {
+        $this->old = $old;
+    }
+
+}
+
+$objB = new B();
+$objB->setOld(30);
+$objB->setYear(2020);
+echo $objB->sum() . ' ' . 'sum' . '<br>';*/
