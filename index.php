@@ -51,7 +51,6 @@ class B extends A
     {
         $this->old = $old;
     }
-
 }
 
 $objB = new B();
@@ -116,4 +115,3 @@ $objE = new E();
 $objE->setExperience(4);
 $objE->setOld(2020);
 echo $objE->sum1() . ' ' . 'сум' . '<br>';
-
