@@ -1,7 +1,9 @@
 <?php
+
 namespace App;
+
 class classOne
 {
-public $a = 10;
+    public $a = 10;
 
 }
